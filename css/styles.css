@@ -2,9 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Fredoka', sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap");
 body {
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ body {
 .btnSortItem {
     padding: 13px 20px;
     color: white;
-    background-color:#ff6b81;
+    background-color: #ff6b81;
     cursor: pointer;
     margin: 5px;
     border-radius: 10px;
@@ -48,17 +48,17 @@ body {
 }
 .item {
     border-radius: 20px;
-    width:calc(25% - 10px);
+    width: calc(25% - 10px);
     margin: 5px;
     height: 300px;
     overflow: hidden;
     float: left;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.5s ;
+    transition: 0.5s;
 }
 .item i {
     position: absolute;
@@ -81,4 +81,19 @@ body {
     transition: 0.5s ease-in-out;
     height: auto;
     object-fit: contain;
+}
+@media screen and (min-width: 375px) {
+    .item {
+        width: calc(100% - 10px);
+    }
+}
+@media screen and (min-width: 768px) {
+    .item {
+        width: calc(50% - 10px);
+    }
+}
+@media screen and (min-width: 1280px) {
+    .item {
+        width: calc(25% - 10px);
+    }
 }
