@@ -78,9 +78,8 @@ body {
 }
 .item img {
     width: 130%;
+    height: 150%;
     transition: 0.5s ease-in-out;
-    height: auto;
-    object-fit: contain;
 }
 @media screen and (min-width: 375px) {
     .item {
