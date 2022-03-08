@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Isotope</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="btnSort">
+            <div class="btnSortItem active" data-filter="*">All</div>
+            <div class="btnSortItem" data-filter=".phone">Phone</div>
+            <div class="btnSortItem" data-filter=".laptop">Laptop</div>
+            <div class="btnSortItem" data-filter=".ipad">Ipad</div>
+            <div class="btnSortItem" data-filter=".pc">Desktop</div>
+        </div>
+        <div class="Slide">
+            <div class="item ipad">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/xuJzHb" alt="">
+            </div>
+            <div class="item phone">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/WJy1l4" alt="">
+            </div>
+            <div class="item laptop">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/4dGhF0" alt="">
+            </div>
+            <div class="item ipad">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/NUExPs" alt="">
+            </div>
+            <div class="item pc">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/VF6W51" alt="">
+            </div>
+            <div class="item pc">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/YlYKWl" alt="">
+            </div>
+            <div class="item phone">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/kzy8Iw" alt="">
+            </div>
+            <div class="item ipad">
+                <i class='bx bx-image'></i>
+                <img src="https://by.com.vn/kqradf" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/isotope.pkgd.min.js"></script>
+    <script>
+        $('.Slide').isotope({
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+        });
+        $('.btnSortItem').click(function () {
+            $('.btnSortItem').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $('.Slide').isotope({
+                filter: selector
+            });
+            return false;
+        })
+    </script>
+</body>
+
+</html>
